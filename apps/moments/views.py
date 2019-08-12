@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from clt_cafe_back.apps.moments.serializers import MomentSerializer
+
+
+class MomentViewSet(viewsets.ModelViewSet):
+    serializer_class = MomentSerializer

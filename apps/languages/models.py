@@ -59,4 +59,5 @@ class Proficiency(models.Model):
         max_length=1,
         choices=LEVEL_CHOICES
     )
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='proficiencies')
+    is_learning = models.BooleanField(default=True)
